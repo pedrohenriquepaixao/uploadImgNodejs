@@ -24,7 +24,7 @@ PostSchema.pre('save', function () {
 
 PostSchema.pre('remove', function () {
     if (process.env.STORAGE_TYPE === 's3') {
-        console.log(this)
+        console.log(this.key)
         return s3.deleteObject({
             Bucket: 'uploadimgrockeat',
             Key: this.key,

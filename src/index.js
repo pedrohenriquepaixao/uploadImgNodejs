@@ -12,7 +12,7 @@ const app = express();
  */
 
 
-mongoose.connect('mongodb+srv://pedrohenriquepaixao:159753@cluster0.xzzm6.mongodb.net/upload', {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
